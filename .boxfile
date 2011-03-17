@@ -1,0 +1,24 @@
+general:
+	writable_directories: [ store/, cache/, files/, images/avatars/upload]
+	
+web:
+    document_root: /
+    index_list: [index.html, index.php]
+    default_gateway: index.php
+    locations: []
+    error_pages: {404: /404.html}
+
+php:
+    version: 5.3.5
+    extensions: [mysql, mysqli, pdo, pdo_mysql, mcrypt, zlib, imagemagick, ftp, gd]
+    error_reporting: 'E_ALL'
+    display_errors: On
+    short_open_tag: On
+    default_mimetype: text/html
+    date_timezone: US/central
+    max_execution_time: 30
+    max_input_time: 60
+    post_max_size: 20M
+    file_uploads: On
+    upload_max_filesize: 20M
+    max_file_uploads: 20
